@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>产品管理</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!--公共的CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--首页的CSS-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1658828_vud4w73neg.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="page-top">
+        <div class="container">
+            <div class="top-lt">
+                <a href="./index.html">汽车销售门店</a>
+                <span>|</span>
+                <a href="./Usermessage_master.html">客人信息管理</a>
+                <span>|</span>
+                <a href="./persion_center.html">个人中心</a>
+                <span>|</span>
+                <a href="./oreder_master.html">管理订单</a>
+                <span>|</span>
+                <a href="">财务管理</a>
+                <span>|</span>
+                <a href="./Mastergoods.html">产品管理</a>
+                <span>|</span>
+                <a href="">售后服务</a>
+                <span>|</span>
+                <a href="./xieyi.html">协议规则</a>
+                <span>|</span>
+                <!-- <a href="" class="download">下载app
+			<div class="down-box">
+				<img src="img/download.png" alt="小米商城">
+				小米商城APP
+			</div>
+		</a>
+			<span>|</span>
+		<a href="">Select Location</a>	 -->
+            </div>
+            <div class="top-gt">
+
+                <div class="login">
+                    <a href="">登录</a>
+                    <span>|</span>
+                    <a href="">注册</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+
+            <div class="ys_center" >
+                <div class="">
+                    <div class="p-3 border mb-3 bg-white">
+                        <h4 class="mb-0">商品管理</h4>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white d-flex justify-content-between">
+                                    <h6 class="mb-0 align-self-center">商品列表</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="/personal/goods" class="form-inline mb-3" method="get">
+                                        <input type="hidden" name="p" value="<%= page.p %>">
+                                    </form>
+                                    <form action="/personal/goods" class="form-inline mb-3" method="get">
+                                        <input type="hidden" name="p" value="<%= page.p %>">
+                                        <div class="form-group">
+                                            <label for="category">类目：</label>
+                                            <select name="category_id" id="category" class="form-control-sm">
+                                                <option value="-1">全部</option>
+                                                <% categorys.forEach(category => { %>
+                                                <option value="<%= category.id %>"
+                                                    <%= category_id==category.id ? 'selected' : '' %>>
+                                                    <%= category.c_name %>
+                                                </option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class="from-group ml-3">
+                                            <input type="submit" value="筛选" class="btn btn-primary btn-sm">
+                                        </div>
+                                        <div class="form-group ml-auto">
+                                            <a href="./add.html" class="btn btn-danger btn-sm">添加商品</a>
+                                        </div>
+                                    </form>
+                                    <table class="table table-hover text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>商品名字</th>
+                                                <th>商品图片</th>
+                                                <th>原价/元</th>
+                                                <th>折扣价/元</th>
+                                                <th>库存</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% page.list.forEach(goods => { %>
+
+                                            <tr>
+                                                <th><%= goods.id %> </th>
+                                                <td><%= goods.name %> </td>
+                                                <td><img src="<%= goods.image %>" width="30" height="30" alt=""></td>
+                                                <td><%= goods.d_price %> </td>
+                                                <td><%= goods.price %> </td>
+                                                <td><%= goods.count %> </td>
+                                                <td>
+                                                    <a href="./edit.html" class="text-primary"
+                                                        title="编辑"><i class="iconfont icon-bianji"></i>编辑</a>
+                                                    <button onclick="del(<%=goods.id%>)"
+                                                        class="btn-link text-danger p-0 border-0 bg-transparent"
+                                                        title="删除"><i class="iconfont icon-delete"></i>删除</button>
+                                                </td>
+                                            </tr>
+
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                    <nav class="d-flex justify-content-between border-top pt-3 px-3">
+                                        <div class="align-self-center">共 <%= page.count %> 条 / 共 <%= page.total %> 页 / 第
+                                            <%= page.p %> 页</div>
+                                        <ul class="pagination mb-0">
+                                            <% if (page.p!=1) { %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/personal/goods?p=<%= page.p-1 %>&category_id=<%= category_id %>">上一页</a>
+                                            </li>
+                                            <% } %>
+                                            <% for( let index = 1; index <= page.total; index++ ) { %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/personal/goods?p=<%= index %>&category_id=<%= category_id %>"><%= index %></a>
+                                            </li>
+                                            <% } %>
+                                            <% if (page.p != page.total) { %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/personal/goods?p=<%= parseInt(page.p)+1 %>&category_id=<%= category_id %>">下一页</a>
+                                            </li>
+                                            <% } %>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script type="js/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2/3.5.12/dist/g2.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.2/dist/data-set.min.js"></script>
+    <!-- <script src="/js/public.js"></script> -->
+    <script>
+        function del(id) {
+            $.getJSON('/personal/goods/del', { id: id }, function (res) {
+                if (res.code == 1) {
+                    alert('删除成功')
+                    location.reload()
+                } else {
+                    alert('删除失败')
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>汽车销售官方网站</title>
+	<meta name="description" content="汽车销售" />
+	<meta name="keywords" content="汽车销售" />
+	<!--处理样式-->
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<!--公共的CSS-->
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<!--首页的CSS-->
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<!--引入网页标题图标-->
+	<link rel="shortcut icon" type="image/x-icon" href="/img/che.jpg">
+</head>
+
+<body>
+	<div class="page-top">
+		<div class="container">
+			<div class="top-lt">
+				<a href="/index">汽车销售门店</a>
+				<span>|</span>
+				<a href="/Usermessage_master">客人信息管理</a>
+				<span>|</span>
+				<a href="/persion_center">个人中心</a>
+				<span>|</span>
+
+				<!-- <a href="" class="download">下载app
+			<div class="down-box">
+				<img src="img/download.png" alt="小米商城">
+				小米商城APP
+			</div>
+		</a>
+			<span>|</span>
+		<a href="">Select Location</a>	 -->
+			</div>
+			<div class="top-gt">
+
+				<div class="login">
+					<%= user.name %>
+				</div>
+				<!-- <div class="userinfo">
+			<a href="" class="link">消息通知</a>
+			<a href="" class="link">我的订单</a>
+			<div class="user">
+				<a href="" class="tit">用户~~</a>
+				<ul>
+				<li><a href="">个人中心</a></li>
+				<li><a href="">评价晒单</a></li>
+				<li><a href="">我的喜欢</a></li>
+				<li><a href="">小米账号</a></li>
+				<li><a href="">退出登录</a></li>
+				</ul>
+			</div>
+	</div> -->
+			</div>
+		</div>
+	</div>
+	<!--导航-->
+	<div class="page-nav">
+		<div class="container">
+			<a href="" class="logo"></a>
+			<ul class="nav">
+				<!-- <li class="nav-item" id="page-all-nav">
+				<a href="" id="allcat" style="font-size:16px;">全部商品分类</a>
+				全部分类下拉菜单
+				<div class="slider-nav">
+					<ul class="slider-ul">
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>玛莎拉蒂</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop phoneli">
+								<a href="" class="pop-li col-5">
+								<img src="/img/ms1.jpg">
+								<p>2017款 4.7L Sport</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/ms2.jpg">
+								<p>GranCabrio 2017款 4.7L Sport</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/ms3.jpg">
+								<p>GranCabrio 2017款 4.7L Sport</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>罗斯莱斯</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/lsls1.jpg">
+								<p>2019款 飞鹰八号典藏版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/lsls2.jpg">
+								<p>2020款 Silver Bullet 特别版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/lsls3.jpg">
+								<p>2020款 Black Badge</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>法拉利</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/fll1.jpg">
+								<p>2020款 Pista</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/fll2.jpg">
+								<p>2015款 Speciale A(停售)</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/fll3.jpeg">
+								<p>2019款 基本型</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>路虎</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/lh1.jpg">
+								<p>揽胜星脉 2020款 P250 R-DYNAMIC S</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/lh2.jpg">
+								<p>2020款 110 P400 HSE</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/lh3.jpg">
+								<p>2020款 3.0 L6 HSE DYNAMIC</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>宝马</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/bm1.jpg">
+								<p>2020款 xDrive25i 豪华套装</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bm2.jpg">
+								<p>2020款 xDrive25Li 尊享型</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bm3.jpg">
+								<p>2020款 120i M运动套装</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>奔驰</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/bc1.jpg">
+								<p>2021款 S 500 L 4MATIC</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bc2.jpg">
+								<p>2021款 C 260 星耀臻藏版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bc3.jpg">
+								<p>2020款 GLE 350 4MATIC 时尚型</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>本田</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/bt1.jpg">
+								<p>2018款 260TURBO CVT尊贵版 国VI</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bt2.jpg">
+								<p>2020款 锐·混动 2.0L 两驱锐·幻夜版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/bt3.jpg">
+								<p>2021款 HATCHBACK 220TURBO CVT潮酷控</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>马自达</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/mzd1.jpg">
+								<p>2020款 2.0L 自动质豪版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/mzd2.jpg">
+								<p>2020款 2.0L 自动耀悦型</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/mzd3.jpg">
+								<p>2012款 1.6L 手动经典款标准型(停售)</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>吉利</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/jl1.jpg">
+								<p>2020款 1.8TD DCT 自动旗舰型</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/jl2.jpg">
+								<p>2019款 领军版 1.5L CVT尊贵型 国VI</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/jl3.jpg">
+								<p>2020款 1.5L CVT精英型</p>	
+								</a>
+								
+							</div>
+						</li>
+						<li class="slider-li">
+							<a href="" class="name">
+								<span>汽销</span>
+								<span>丰田</span>
+								<span class="You">></span>
+							</a>
+							<div class="slider-pop">
+								<a href="" class="pop-li">
+								<img src="/img/ft1.jpg">
+								<p>2021款 1.2T S-CVT 先锋版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/ft2.jpg">
+								<p>2020款 2.0L CVT两驱尊贵版</p>	
+								</a>
+								<a href="" class="pop-li">
+								<img src="/img/ft3.jpg">
+								<p>2018款 3.5L TX-L</p>	
+								</a>
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li> -->
+				<% categories.forEach(category => { %>
+				<li class="nav-item">
+					<a href="/list/<%= category.category_id %>" class="tit"><%= category.category_name %> </a>
+				</li>
+				<% }) %>
+			</ul>
+			<!--搜索框-->
+			<div class="search">
+				<form action="/search" method="get">
+					<input type="text" name="keyword" id="name" placeholder="请输入车型" class="q" required pattern="^[\u4e00-\u9fa5a-zA-Z0-9]+$">
+					<input type="submit" class="btn" name="" value="">
+					<div class="tags">
+						<!-- <span  ">小米</span>
+					<span  ">小米10青春版</span> -->
+					</div>
+
+					<ul class="hot">
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>红米K30 pro</span>
+							</a>
+						</li>
+
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--轮播导航S-->
+	<div class="idx-banner container">
+		<ul class="banner-list">
+			<li><img src="/img/lunbo4.jpg"><a href=""></a></li>
+			<li><img src="/img/banner2.png"><a href=""></a></li>
+			<li><img src="/img/banner3.png"><a href=""></a></li>
+			<li><img src="/img/banner4.png"><a href=""></a></li>
+			<li><img src="/img/banner5.png"><a href=""></a></li>
+		</ul>
+		<a href="" class="btn " id="prev">
+			<</a> <a href="" class="btn " id="next">>
+		</a>
+		<div class="page">
+			<a href=""><span>1</span></a>
+			<a href=""><span>2</span></a>
+			<a href=""><span>3</span></a>
+			<a href=""><span>4</span></a>
+			<a href=""><span>5</span></a>
+		</div>
+
+	</div>
+	<!--轮播导航S-->
+	<!-- 菜单广告位-->
+	<div class="idx-menu-adv  container">
+		<ul class="menu">
+			<li class="content"><a href="/persion_center"><img src="img/user1.png" class="imgf">个人中心</a></li>
+			<!--<li class="after"></li> <li class="before"></li>-->
+			<li class="content"><a href="/Usermessage_master"><img src="/img/menu2.png">客人信息管理</a></li>
+			<!--<li class="after"></li> <li class="before"></li>-->
+			<li class="content"><a href=""><img src="/img/server1.png" class="imgf">售后服务</a></li>
+			<li class="content"><a href=""><img src="/img/server1.png" class="imgf">产品管理</a></li>
+			<!--<li class="after">-->
+			<li class="content"><a href=""><img src="/img/menu5.png">管理订单</a></li>
+			<!--<li class="after">-->
+			<li class="content"><a href=""><img src="/img/menu6.png">财务管理</a></li>
+		</ul>
+		<a href="" class="pic"><img src="/img/ms1.jpg"></a>
+		<a href="" class="pic"><img src="/img/fll2.jpg"></a>
+		<a href="" class="pic"><img src="/img/lunbo.jpg"></a>
+	</div>
+
+	<!--广告图 -->
+	<div class="idx-adv container">
+		<a href=""><img src="/img/gg1.jpg"></a>
+	</div>
+
+	<!-- 大内容区-->
+	<div class="idx-container">
+
+
+		<!-- 侧边栏-->
+		<ul class="page-slider">
+			<!-- <li calss="APP">
+		<a href="">
+		<img src="img/phoneAPP.png" class="imgf">
+		<img src="img/phoneAPP2.png" class="imgf imgs">
+		<span>手机APP</span>
+		</a>
+		<div class="rightpop">			
+				<img src="img/download.png">
+				<p>扫码领取新人百元礼包</p>			
+		</div>
+	</li> -->
+			<li>
+				<a href="/persion_center">
+					<img src="/img/user1.png" class="imgf">
+					<img src="/img/user2.png" class="imgf imgs">
+					<span>个人中心</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="/img/user1.png" class="imgf">
+					<img src="/img/user2.png" class="imgf imgs">
+					<span>售后服务</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="/img/server1.png" class="imgf">
+					<img src="/img/server2.png" class="imgf imgs">
+					<span>管理订单</span>
+				</a>
+			</li>
+			<!-- <li>
+		<a href="">
+		<img src="img/car1.png" class="imgf">
+		<img src="img/car2.png" class="imgf imgs">
+		<span>购物车</span>
+		</a>
+	</li> -->
+			<li>
+				<a href="#">
+					<img src="/img/server1.png" class="imgf">
+					<img src="/img/server2.png" class="imgf imgs">
+					<span>返回顶部</span>
+				</a>
+			</li>
+		</ul>
+
+
+</body>
+
+</html>
